@@ -1,22 +1,22 @@
 /*
  * Lab 3, Task 1
- * Name: <your name>
- * Student ID: <your student ID>
+ * Name: <Zahra Guluzade>
+ * Student ID: <251ADC008>
  *
  * Implement array algorithms:
- *   - find minimum value
- *   - find maximum value
- *   - calculate sum
- *   - calculate average
+ * - find minimum value
+ * - find maximum value
+ * - calculate sum
+ * - calculate average
  *
  * Rules:
- *   - Write separate functions for each operation.
- *   - Work with int arrays.
- *   - Do not include any headers besides <stdio.h>.
- *   - You may assume size >= 1 and that the sum fits in an int.
- *   - Average must return a float and must NOT be truncated
+ * - Write separate functions for each operation.
+ * - Work with int arrays.
+ * - Do not include any headers besides <stdio.h>.
+ * - You may assume size >= 1 and that the sum fits in an int.
+ * - Average must return a float and must NOT be truncated
  *     (e.g. {1, 2} -> 1.50, not 1.00).
- *   - Do not modify main.
+ * - Do not modify main.
  *
  * Example:
  *   int arr[] = {1, 2, 3, 4, 5};
@@ -54,21 +54,34 @@ int main(void) {
 
 // Implement functions below
 int array_min(int arr[], int size) {
-    // TODO: return smallest element
-    return 0; // placeholder
+    int min = arr[0];
+    for (int i = 1; i < size; i++) {
+        if (arr[i] < min) {
+            min = arr[i];
+        }
+    }
+    return min;
 }
 
 int array_max(int arr[], int size) {
-    // TODO: return largest element
-    return 0; // placeholder
+    int max = arr[0];
+    for (int i = 1; i < size; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    return max;
 }
 
 int array_sum(int arr[], int size) {
-    // TODO: return sum of elements
-    return 0; // placeholder
+    int sum = 0;
+    for (int i = 0; i < size; i++) {
+        sum += arr[i];
+    }
+    return sum;
 }
 
 float array_avg(int arr[], int size) {
-    // TODO: return average as float (avoid integer division)
-    return 0.0f; // placeholder
+    int sum = array_sum(arr, size);
+    return (float)sum / size;
 }
