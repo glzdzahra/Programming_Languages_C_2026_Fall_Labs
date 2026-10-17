@@ -1,0 +1,3 @@
+Hello, C Files!
+This is line two of the file.
+Learning file I/O in Week 5.
